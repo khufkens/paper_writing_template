@@ -2,13 +2,11 @@
 language: r
 pandoc_version: 2.0.6
 sudo: required
-r_packages:
-  - rmarkdown
-  - knitr
 cache:
   packages: yes
 
 install:
+  - R -e "install.packages('rmarkdown')"
   - mkdir ~/tmp && cd ~/tmp
   - git clone https://${GH_TOKEN}@github.com/khufkens/paper_template.git .
 
