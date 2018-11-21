@@ -1,0 +1,76 @@
+---
+title: "My little study of noise"
+author: "John Doe^1^"
+header-includes:
+  - \usepackage{setspace}
+  - \doublespacing
+  - \usepackage{lineno}
+  - \linenumbers
+output:
+  word_document:
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    number_sections: yes
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+---
+
+```{r setup, include = FALSE}
+  knitr::opts_chunk$set(echo = TRUE)
+  library(ggplot2)
+  library(ggthemes)
+  library(tidyverse)
+  library(knitr)
+```
+
+^1^University of Life, planet Earth
+
+# Abstract
+
+# Introduction
+
+# Methods
+
+```{r echo=FALSE}
+# some analysis
+summary_table <- mtcars %>% 
+    group_by(cyl) %>%
+    do(sample_n(.,2))
+```
+
+A formula (of the bias ratio):
+$$ BR = \frac{1}{n} \sum_{i=1}^{n} e_i / |e_i| $$
+
+# Results
+
+```{r map-ref, echo = FALSE, fig.cap = "Some random noise"}
+  plot(rnorm(100))
+```
+
+Some fancy graphs displaying noise (with caption).
+
+A table providing some information (with caption)
+
+```{r table, echo=FALSE}
+kable(summary_table, caption="This is a summary table.")
+```
+
+# Discussion & Conclusion
+
+# Reference
+
+Force a pagebreak after the references.
+
+```{r, results='asis', eval=(opts_knit$get('rmarkdown.pandoc.to') == 'latex'), echo = FALSE}
+cat('\\pagebreak')
+```
+# Appendix
+
+```{r appendix_table_1, echo=FALSE}
+kable(summary_table, caption="This is a summary table.")
+```
+
+
