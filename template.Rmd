@@ -7,15 +7,15 @@ header-includes:
   - \usepackage{lineno}
   - \linenumbers
 output:
-  word_document:
-  html_document:
-    fig_caption: yes
-    force_captions: yes
-    number_sections: yes
   pdf_document:
     fig_caption: yes
     keep_tex: yes
     number_sections: yes
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    number_sections: yes
+  word_document:
 ---
 
 ```{r setup, include = FALSE}

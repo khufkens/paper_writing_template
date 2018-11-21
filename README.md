@@ -1,4 +1,4 @@
-# Generic R journal article template
+# Generic R paper template
 
 This template provides an easy way to setup a journal article structure in the R markdown format which stick to [good paper writing practices](https://khufkens.github.io/paper_writing_checklist/).
 
