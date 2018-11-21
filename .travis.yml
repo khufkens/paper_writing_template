@@ -12,9 +12,10 @@ install:
   - git clone https://${GH_TOKEN}@github.com/khufkens/paper_template.git .
 
 script:
-  - R -e "rmarkdown::render('~/tmp/template.Rmd')"
+  - R -e "rmarkdown::render('./template.Rmd')"
   
 after_success:
+  - cd ~/tmp
   - git add *.pdf
   - git commit -am "[skip travis] update pdf (travis build ${TRAVIS_BUILD_NUMBER})"
   - git push -f origin master
