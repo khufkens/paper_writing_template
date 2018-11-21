@@ -13,7 +13,7 @@ install:
   - git clone https://${GH_TOKEN}@github.com/khufkens/paper_template.git .
 
 script:
-  - Rscript -e "rmarkdown::render("template.Rmd")"
+  - R -e "rmarkdown::render("template.Rmd")"
   
 after_success:
   - git add *.pdf
