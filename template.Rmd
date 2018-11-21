@@ -50,7 +50,7 @@ Some fancy graphs displaying noise (with caption).
 A table providing some information (with caption)
 
 ```{r table, echo=FALSE}
-kable(sorted_table, caption="This is a summary table.")
+knitr::kable(sorted_table, caption="This is a summary table.")
 ```
 
 # Discussion & Conclusion
