@@ -33,9 +33,7 @@ output:
 
 ```{r echo=FALSE}
 # some analysis
-summary_table <- mtcars %>% 
-    group_by(cyl) %>%
-    do(sample_n(.,2))
+sorted_table <- mtcars[order(mtcars$mpg),]
 ```
 
 A formula (of the bias ratio):
@@ -52,7 +50,7 @@ Some fancy graphs displaying noise (with caption).
 A table providing some information (with caption)
 
 ```{r table, echo=FALSE}
-kable(summary_table, caption="This is a summary table.")
+kable(sorted_table, caption="This is a summary table.")
 ```
 
 # Discussion & Conclusion
