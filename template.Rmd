@@ -21,10 +21,6 @@ output:
 
 ```{r setup, include = FALSE}
   knitr::opts_chunk$set(echo = TRUE)
-  library(ggplot2)
-  library(ggthemes)
-  library(tidyverse)
-  library(knitr)
 ```
 
 ^1^University of Life, planet Earth
