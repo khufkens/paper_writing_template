@@ -16,7 +16,7 @@ output:
     force_captions: yes
     number_sections: yes
   word_document:
-    fig_caption: TRUE
+    fig_caption: yes
 ---
 
 ```{r setup, include = FALSE}
