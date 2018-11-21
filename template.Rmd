@@ -65,7 +65,7 @@ cat('\\pagebreak')
 # Appendix
 
 ```{r appendix_table_1, echo=FALSE}
-kable(summary_table, caption="This is a summary table.")
+knitr::kable(summary_table, caption="This is a summary table.")
 ```
 
 
