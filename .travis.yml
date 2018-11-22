@@ -6,8 +6,7 @@ cache:
   packages: yes
 
 install:
-  - R -e "install.packages('rmarkdown')"
-  - R -e "install.packages('knitr')"
+  - R -e "install.packages(c('rmarkdown','knitr'))"
   - mkdir ~/tmp && cd ~/tmp
   - git clone https://${GH_TOKEN}@github.com/khufkens/paper_template.git .
 
@@ -15,7 +14,6 @@ script:
   - R -e "rmarkdown::render('./template.Rmd')"
   
 after_success:
-  - cd ~/tmp
   - git add *.pdf
   - git commit -am "[skip travis] update pdf (travis build ${TRAVIS_BUILD_NUMBER})"
   - git push -f origin master
